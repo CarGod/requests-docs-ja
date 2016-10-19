@@ -195,8 +195,8 @@ Requestsは、必要としているイベントにおいてもカスタムエン
 リクエストによって返されたバイナリデータから画像を作成する例として、以下のようなコードになります。:
 
     >>> from PIL import Image
-    >>> from StringIO import StringIO
-    >>> i = Image.open(StringIO(r.content))
+    >>> from io import BytesIO
+    >>> i = Image.open(BytesIO(r.content))
 
 
 .. JSON Response Content
